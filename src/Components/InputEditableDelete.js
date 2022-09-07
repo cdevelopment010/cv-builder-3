@@ -98,16 +98,20 @@ class InputEditableDelete extends Component {
         if(this.state.edit && this.props.inputType==="text") {
             return (
                 <div className="">
-                    <input placeholder={this.props.fieldName} type="text" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
-                    <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                    <label className="input-label">
+                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="text" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                    </label>
                 </div>
             )
         }
         if(this.state.edit && this.props.inputType==="email") {
             return (
                 <div className="">
-                    <input placeholder={this.props.fieldName} type="email" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
-                    <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                    <label className="input-label">
+                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="email" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                    </label>
                 </div>
             )
         }

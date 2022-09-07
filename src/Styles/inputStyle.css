@@ -20,3 +20,26 @@
     /* display: inline; */
     scale: 1;
 }
+
+.input-label{
+    position: relative; 
+}
+.input-label>i{
+    position: absolute; 
+    right: 10px; 
+    top: 1px;
+}
+.input-label>i:hover{
+    color: blue;
+    font-weight: bold;
+}
+
+.input-label>input {
+    outline: none; 
+    border: 1px solid transparent; 
+    background: rgb(245, 239, 239);
+    border-radius: 3px;
+}
+.input-label>input:active, .input-label>input:focus {
+    border-color: blue;
+}
