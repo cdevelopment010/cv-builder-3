@@ -1,0 +1,22 @@
+.input-text-state{
+    position: relative; 
+    display: inline-block;
+}
+
+.hover-edit{
+    /* display: none; */
+    scale: 0; 
+    position: absolute; 
+    top: -1em;
+    right:-0.5em;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    transition: 0.2s;
+    padding: 2px; 
+}
+
+.input-text-state:hover .hover-edit {
+    /* display: inline; */
+    scale: 1;
+}
