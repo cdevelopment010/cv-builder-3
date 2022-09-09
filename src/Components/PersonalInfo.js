@@ -78,7 +78,7 @@ class PersonalInfo extends Component {
                                 inputType="text"/>
                         )
                     })}
-                    <span className="justify-self-center"><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('websites')}></i></span>
+                    <span className="justify-self-center" tabIndex="0" onKeyPress={() => this.addToArray('websites')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('websites')}></i></span>
                 </div>
             </div>
         )

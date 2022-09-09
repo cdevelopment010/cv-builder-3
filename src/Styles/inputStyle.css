@@ -1,6 +1,7 @@
 .input-text-state{
     position: relative; 
     display: inline-block;
+    white-space: pre-line;
 }
 
 .hover-edit{
@@ -23,23 +24,43 @@
 
 .input-label{
     position: relative; 
+    height: 100%; 
+    width: 100%; 
 }
+
 .input-label>i{
     position: absolute; 
     right: 10px; 
     top: 1px;
 }
-.input-label>i:hover{
+.input-label>button{
+    position: absolute; 
+    right: 10px; 
+    top: 1px;
+    outline: none;
+    border: none;
+}
+.input-label>textarea+button{
+    top: -10px;
+}
+
+.input-label>button:hover>i, .input-label>button:active>i, .input-label>button:focus>i{
     color: blue;
     font-weight: bold;
 }
 
-.input-label>input {
+.input-label>input, .input-label>textarea {
     outline: none; 
     border: 1px solid transparent; 
     background: rgb(245, 239, 239);
     border-radius: 3px;
 }
-.input-label>input:active, .input-label>input:focus {
+.input-label>input:active, .input-label>input:focus,
+.input-label>textarea:active, .input-label>textarea:focus {
     border-color: blue;
+}
+
+textarea {
+    width: 100%; 
+    height: 100%;
 }

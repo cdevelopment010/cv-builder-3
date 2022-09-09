@@ -10,6 +10,12 @@ class InputEditable extends Component {
         }
 
         this.updateEdit = this.updateEdit.bind(this)
+        this.submitInput = this.submitInput.bind(this);
+    }
+
+    submitInput( e ) {
+        console.log(e);
+        if (e.key ===  "Enter"){this.updateEdit()}
     }
 
     componentDidMount() {
@@ -98,8 +104,8 @@ class InputEditable extends Component {
             return (
                 <div className="">
                     <label className="input-label">
-                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="text" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd" />
-                        <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="text" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd" />
+                        <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" ></i></button>
                     </label>
                 </div>
             )
@@ -108,8 +114,8 @@ class InputEditable extends Component {
             return (
                 <div className="">
                     <label  className="input-label">
-                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="email" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
-                        <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
+                        <input placeholder={this.props.fieldName} className="p-1 mb-2"  type="email" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i></button>
 
                     </label>
                 </div>
@@ -119,10 +125,10 @@ class InputEditable extends Component {
             return (
                 <div className="">
                     <label  className="input-label">
-                        <textarea placeholder={this.props.fieldName} className="p-1 mb-2" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
-                        <i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i>
-
+                        <textarea  placeholder={this.props.fieldName} className="p-1 mb-2" value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i></button>
                     </label>
+
                 </div>
             )
         }
