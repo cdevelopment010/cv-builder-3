@@ -4,7 +4,12 @@
     white-space: pre-line;
 }
 
-.hover-edit{
+.delete-obj {
+    position: relative; 
+    display: inline-block;
+}
+
+.hover-edit, .hover-edit-obj{
     /* display: none; */
     scale: 0; 
     position: absolute; 
@@ -17,7 +22,11 @@
     padding: 2px; 
 }
 
-.input-text-state:hover .hover-edit {
+.hover-edit-obj {
+    right: 90%;
+}
+
+.input-text-state:hover .hover-edit, .delete-obj:hover .hover-edit-obj {
     /* display: inline; */
     scale: 1;
 }
@@ -63,4 +72,9 @@
 textarea {
     width: 100%; 
     height: 100%;
+}
+
+
+.btn-add:hover, .btn-add:active, .btn-add:focus{
+    color: #20a727;
 }

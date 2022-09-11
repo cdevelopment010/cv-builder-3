@@ -1,9 +1,19 @@
 __still to do__
-* skills section
 * figure out how I will delete a whole section
+* Add placeholder values rather than fieldNames for inputs. 
+* Eduction Section
+* References Section
+* Style CV
 
 __Things to think about__
+* Delete from array without pressing tick first.
+* textarea pencil edit full width. 
 
+
+__done 11/09/2022__
+* skills section
+* Projects section
+* Career section
 
 __done 09/09/2022__
 * Tab doesn't go to tick
