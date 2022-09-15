@@ -61,7 +61,7 @@ class Skills extends Component {
                     <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
                 </div>
                 <div>
-                    <ul className="d-flex flex-wrap">
+                    <ul className="d-flex flex-wrap d-block-sm">
                     {this.state.skills.map((skill, index) => {
                         return( 
                             <li className="list-none d-flex mr-3 align-center" key={`skills-input-${index}`} > 
@@ -72,7 +72,10 @@ class Skills extends Component {
                                 deleteCallback = {this.deleteFromArray}
                                 fieldName={`skills-${index}`} 
                                 type="p" 
-                                inputType="text"/>
+                                inputType="text"
+                                placeholder="Microsoft Excel"
+                                additionalClasses="w-100"
+                                />
                             </li>
                         )
                     })}

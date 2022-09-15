@@ -1,0 +1,10 @@
+@media screen and (max-width: 500px){
+    .d-block-sm{display:block}
+    .grid-1-col-sm {
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .grid-col-span-1-sm{grid-column: auto / span 1}
+    .input-label>input{width:100%}
+}

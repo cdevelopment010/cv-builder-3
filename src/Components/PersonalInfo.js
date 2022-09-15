@@ -58,11 +58,11 @@ class PersonalInfo extends Component {
 
     render() {
         return (
-            <div className="grid-2-col p-5">
+            <div className="grid-2-col p-5 grid-1-col-sm">
                 <div>
-                    <InputEditable data={this.state.name} callback={this.inputChange} fieldName={'name'} type="h1" inputType="text"/>
-                    <InputEditable data={this.state.email} callback={this.inputChange} fieldName={'email'} type="p" inputType="email"/>
-                    <InputEditable data={this.state.phone} callback={this.inputChange} fieldName={'phone'}  type="p" inputType="text"/>
+                    <InputEditable data={this.state.name} callback={this.inputChange} fieldName={'name'} type="h1" inputType="text" placeholder="John Doe"/>
+                    <InputEditable data={this.state.email} callback={this.inputChange} fieldName={'email'} type="p" inputType="email" placeholder="John.Doe@example.com"/>
+                    <InputEditable data={this.state.phone} callback={this.inputChange} fieldName={'phone'}  type="p" inputType="text" placeholder="123-123-1234"/>
                 </div>
                 
                 <div>
@@ -75,7 +75,9 @@ class PersonalInfo extends Component {
                                 deleteCallback = {this.deleteFromArray}
                                 fieldName={`websites-${index}`} 
                                 type="a" 
-                                inputType="text"/>
+                                inputType="text"
+                                placeholder="www.google.com"
+                                />
                         )
                     })}
                     <span className="justify-self-center" tabIndex="0" onKeyPress={() => this.addToArray('websites')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('websites')}></i></span>

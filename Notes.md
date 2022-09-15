@@ -1,13 +1,23 @@
 __still to do__
-* figure out how I will delete a whole section
-* Add placeholder values rather than fieldNames for inputs. 
-* Eduction Section
-* References Section
 * Style CV
+    * Create header
+    * Create Footer
+    * Create Personalise styling section
+    * Create Print Btn
+
+* figure out how I will delete a whole section
+* Add section btn - how to show drop down/select?
+* Create a blank input section
 
 __Things to think about__
 * Delete from array without pressing tick first.
 * textarea pencil edit full width. 
+* Tool tip on inputs?
+
+__done 15/09/2022__
+* Add placeholder values rather than fieldNames for inputs. 
+* Eduction Section
+* References Section
 
 
 __done 11/09/2022__

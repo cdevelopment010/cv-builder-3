@@ -75,7 +75,7 @@ class Projects extends Component {
                     <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
                 </div>
                 <div>
-                    <div className="grid-2-col grid-col-gap">
+                    <div className="grid-2-col grid-col-gap grid-1-col-sm">
                     {this.state.projects.map((project, index) => {
                         return( 
                                 <div key={`projects-input-${index}`} className="delete-obj" data-name={`projects-${index}`}>
@@ -86,6 +86,7 @@ class Projects extends Component {
                                      type="h3" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
+                                     placeholder="Project Title"
                                     />
                                     <InputEditable
                                      data={project.link} 
@@ -94,6 +95,7 @@ class Projects extends Component {
                                      type="a" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
+                                     placeholder="Project link"
                                     />
                                     <InputEditable
                                      data={project.description} 
@@ -101,6 +103,7 @@ class Projects extends Component {
                                      fieldName={`projects-${index}-description`} 
                                      type="p" 
                                      inputType="textArea"
+                                     placeholder="Description of project..."
                                     />
 
 

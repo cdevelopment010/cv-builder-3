@@ -3,16 +3,17 @@ import InputEditable from "./InputEditable";
 // import InputEditableDelete from "./InputEditableDelete";
 import '../Styles/helper.css'
 
-class Career extends Component {
+class Education extends Component {
 
     constructor() {
         super(); 
 
         this.state = {
-            title: 'Career',
-            careers: [{
-                title: '',
-                company: '',
+            title: 'Education',
+            educations: [{
+                subject: '',
+                institute: '',
+                grade: '',
                 dates: '',
                 description: ''
             }]
@@ -77,22 +78,22 @@ class Career extends Component {
                 </div>
                 <div>
                     <div className="grid-1-col grid-col-gap">
-                    {this.state.careers.map((career, index) => {
+                    {this.state.educations.map((education, index) => {
                         return( 
-                                <div key={`careers-input-${index}`} className="delete-obj grid-2-col grid-1-col-sm grid-col-gap" data-name={`careers-${index}`}>
+                                <div key={`educations-input-${index}`} className="delete-obj grid-2-col grid-1-col-sm grid-col-gap" data-name={`educations-${index}`}>
                                     <InputEditable
-                                     data={career.title} 
+                                     data={education.subject} 
                                      callback={this.inputChange}
-                                     fieldName={`careers-${index}-title`} 
+                                     fieldName={`educations-${index}-subject`} 
                                      type="h3" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
-                                     placeholder="Job Title"
+                                     placeholder="Mathematics"
                                     />
                                     <InputEditable
-                                    data={career.dates} 
+                                    data={education.dates} 
                                     callback={this.inputChange}
-                                    fieldName={`careers-${index}-dates`} 
+                                    fieldName={`educations-${index}-dates`} 
                                     type="p" 
                                     inputType="text"
                                     additionalClasses="mt-1 mb-1 w-100"
@@ -100,24 +101,34 @@ class Career extends Component {
                                     placeholder="July 2021 - Present"
                                     />
                                     <InputEditable
-                                     data={career.company} 
+                                     data={education.grade} 
                                      callback={this.inputChange}
-                                     fieldName={`careers-${index}-company`} 
+                                     fieldName={`educations-${index}-grade`} 
                                      type="p" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
-                                     placeholder="Company"
+                                     placeholder="First"
+                                    />
+                                    <div></div>
+                                    <InputEditable
+                                     data={education.institute} 
+                                     callback={this.inputChange}
+                                     fieldName={`educations-${index}-institute`} 
+                                     type="p" 
+                                     inputType="text"
+                                     additionalClasses="mt-1 mb-1 w-100"
+                                     placeholder="University of [X]"
                                     />
                                     <div></div>
 
                                     <div className="grid-col-span-2 grid-col-span-1-sm">
                                         <InputEditable
-                                        data={career.description} 
+                                        data={education.description} 
                                         callback={this.inputChange}
-                                        fieldName={`careers-${index}-description`} 
+                                        fieldName={`educations-${index}-description`} 
                                         type="p" 
                                         inputType="textArea"
-                                        placeholder="Job Description"
+                                        placeholder="Description"
                                         />
                                     </div>
 
@@ -130,11 +141,11 @@ class Career extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('careers')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('careers')}></i></span>
+                    <span className="justify-self-center text-success btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('educations')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('educations')}></i></span>
                 </div>
             </div>
         )
     }
 }
 
-export default Career;
+export default Education;

@@ -59,7 +59,7 @@ class AboutMe extends Component {
             <div className="grid-1-col p-5">
                 <div>
                     <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
-                    <InputEditable data={this.state.aboutText} callback={this.inputChange} fieldName={'aboutText'} type="p" inputType="textArea"/>
+                    <InputEditable data={this.state.aboutText} callback={this.inputChange} fieldName={'aboutText'} type="p" inputType="textArea" placeholder="Personal statement..."/>
                 </div>
             </div>
         )

@@ -3,18 +3,17 @@ import InputEditable from "./InputEditable";
 // import InputEditableDelete from "./InputEditableDelete";
 import '../Styles/helper.css'
 
-class Career extends Component {
+class References extends Component {
 
     constructor() {
         super(); 
 
         this.state = {
-            title: 'Career',
-            careers: [{
-                title: '',
-                company: '',
-                dates: '',
-                description: ''
+            title: 'References',
+            references: [{
+                name: '',
+                email: '',
+                phone: ''
             }]
         }
 
@@ -76,50 +75,38 @@ class Career extends Component {
                     <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
                 </div>
                 <div>
-                    <div className="grid-1-col grid-col-gap">
-                    {this.state.careers.map((career, index) => {
+                    <div className="grid-2-col grid-1-col-sm grid-col-gap">
+                    {this.state.references.map((reference, index) => {
                         return( 
-                                <div key={`careers-input-${index}`} className="delete-obj grid-2-col grid-1-col-sm grid-col-gap" data-name={`careers-${index}`}>
+                                <div key={`references-input-${index}`} className="delete-obj" data-name={`references-${index}`}>
                                     <InputEditable
-                                     data={career.title} 
+                                     data={reference.name} 
                                      callback={this.inputChange}
-                                     fieldName={`careers-${index}-title`} 
+                                     fieldName={`references-${index}-name`} 
                                      type="h3" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
-                                     placeholder="Job Title"
+                                     placeholder="Jane Doe"
                                     />
                                     <InputEditable
-                                    data={career.dates} 
-                                    callback={this.inputChange}
-                                    fieldName={`careers-${index}-dates`} 
-                                    type="p" 
-                                    inputType="text"
-                                    additionalClasses="mt-1 mb-1 w-100"
-                                    additionalClassesOutput="text-right"
-                                    placeholder="July 2021 - Present"
-                                    />
-                                    <InputEditable
-                                     data={career.company} 
+                                     data={reference.email} 
                                      callback={this.inputChange}
-                                     fieldName={`careers-${index}-company`} 
+                                     fieldName={`references-${index}-email`} 
+                                     type="a" 
+                                     inputType="email"
+                                     additionalClasses="mt-1 mb-1 w-100"
+                                     placeholder="Jane.Doe@example.com"
+                                    />
+                                    <InputEditable
+                                     data={reference.phone} 
+                                     callback={this.inputChange}
+                                     fieldName={`references-${index}-phone`} 
                                      type="p" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
-                                     placeholder="Company"
+                                     placeholder="789-789-7890"
                                     />
-                                    <div></div>
 
-                                    <div className="grid-col-span-2 grid-col-span-1-sm">
-                                        <InputEditable
-                                        data={career.description} 
-                                        callback={this.inputChange}
-                                        fieldName={`careers-${index}-description`} 
-                                        type="p" 
-                                        inputType="textArea"
-                                        placeholder="Job Description"
-                                        />
-                                    </div>
 
                                     <span className="hover-edit-obj">
                                         <i className="fa-solid fa-trash-can text-danger cursor-pointer" onClick={this.deleteFromArray}></i>
@@ -130,11 +117,11 @@ class Career extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('careers')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('careers')}></i></span>
+                    <span className="justify-self-center text-success btn-add" tabIndex="0" onKeyPress={() => this.addToArray('references')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('references')}></i></span>
                 </div>
             </div>
         )
     }
 }
 
-export default Career;
+export default References;
