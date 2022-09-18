@@ -1,0 +1,11 @@
+footer{width: 100%;padding: 1rem;background:#454952; color:#FBAF34}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+footer li {list-style-type: none;transition:0.5s;}
+footer li:hover {scale:1.1}
+footer img {height:48px; width:48px;}
+footer a {color:#FBAF34}

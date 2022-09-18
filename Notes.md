@@ -1,18 +1,30 @@
 __still to do__
-* Style CV
-    * Create header
-    * Create Footer
-    * Create Personalise styling section
-    * Create Print Btn
-
+* Font family for text area - be consistent
 * figure out how I will delete a whole section
 * Add section btn - how to show drop down/select?
 * Create a blank input section
+
+* personalise section
+    * Create correct list of drop down options
+    * Add root variables to CSS 
+    * Update functions to update root variables
+    * download google fonts
+
+
 
 __Things to think about__
 * Delete from array without pressing tick first.
 * textarea pencil edit full width. 
 * Tool tip on inputs?
+* hide output if there is no value
+
+__done 18/09/2022__
+* Style CV
+    * Create header
+    * Create Footer
+    * Create Print Btn
+    * Create Personalise styling section
+
 
 __done 15/09/2022__
 * Add placeholder values rather than fieldNames for inputs. 

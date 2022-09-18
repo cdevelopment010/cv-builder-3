@@ -8,3 +8,18 @@
     .grid-col-span-1-sm{grid-column: auto / span 1}
     .input-label>input{width:100%}
 }
+
+
+
+@media print {
+
+    .print-hide {
+        display: none;
+    }
+    .btn-add {display:none}
+    .input-label{display:none;}
+    .print-area {
+        width: 100%;
+        border:none;
+    }
+}

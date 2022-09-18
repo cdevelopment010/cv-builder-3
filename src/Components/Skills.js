@@ -63,9 +63,13 @@ class Skills extends Component {
                 <div>
                     <ul className="d-flex flex-wrap d-block-sm">
                     {this.state.skills.map((skill, index) => {
+                        let hidePoint = ""
+                        if (skill === "") {
+                            hidePoint = "d-none"
+                        }
                         return( 
                             <li className="list-none d-flex mr-3 align-center" key={`skills-input-${index}`} > 
-                                <i className="fa-solid fa-circle-dot mr-1"></i>
+                                <i className={`fa-solid fa-circle-dot mr-1 ${hidePoint}`}></i>
                                 <InputEditableDelete 
                                 data={skill} 
                                 callback={this.inputChange}

@@ -87,6 +87,7 @@
 
 /**********/
 
+.d-none{display:none;}
 
 /* display flex */
 .d-flex {display:flex}
@@ -108,6 +109,8 @@
 }
 
 .grid-col-gap {grid-column-gap: 0.5em;}
+.grid-row-gap {grid-row-gap: 0.5em;}
+.grid-row-gap-3 {grid-row-gap: 1.5em;}
 .grid-col-span-2{grid-column: auto / span 2}
 
 .align-self-center{align-self: center;}
@@ -124,6 +127,9 @@
 
 .bg-white {background: white; }
 
+.text-bold {font-weight: bold;}
+.text-italic {font-style: italic;}
+.text-underline {text-decoration: underline;}
 
 
 .hr-line {
