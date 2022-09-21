@@ -1,6 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
-    --currentColor: red;
+    --primary-color-fc: red;
+
+    /*Paragraph variables*/
+    --p-text-ff: 'Times New Romans';
+    --p-text-fs: 12px;
+    --p-text-fw: 400;
+    --p-text-fi:normal;
+    --p-text-fu:normal;
+    --p-text-fc:black;
+
+    /*section header variables*/
+    --sh-ff: ;
+    --sh-fs: 12px;
+    --sh-fw: 400;
+    --sh-fi:normal;
+    --sh-fu:normal;
+
+
+
 }
+
+/*
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+*/
 
 .personalise-controls {
     width: 60%; 
@@ -45,4 +72,22 @@
 .btn-personalise.active {
     box-shadow:  1px 1px 0 1px rgba(0,0,0,0.25);
     background: rgba(0,0,0,0.15)
+}
+
+
+.p-text {
+    font-family: var(--p-text-ff);
+    font-size: var(--p-text-fs);
+    font-weight: var(--p-text-fw);
+    font-style: var(--p-text-fi);
+    text-decoration: var(--p-text-fu);
+    color: var(--p-text-fc);
+}
+
+
+.primary-color-text {
+    color: var(--primary-color-fc);
+}
+.primary-color-bg {
+    background: var(--primary-color-fc);
 }

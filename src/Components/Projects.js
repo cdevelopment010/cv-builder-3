@@ -116,7 +116,7 @@ class Projects extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add" tabIndex="0" onKeyPress={() => this.addToArray('projects')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('projects')}></i></span>
+                    <span className="justify-self-center text-success btn-add primary-color-text" tabIndex="0" onKeyPress={() => this.addToArray('projects')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('projects')}></i></span>
                 </div>
             </div>
         )

@@ -58,7 +58,7 @@ class PersonalInfo extends Component {
 
     render() {
         return (
-            <div className="grid-2-col p-5 grid-1-col-sm">
+            <div className="grid-2-col p-5 grid-1-col-sm primary-color-bg">
                 <div>
                     <InputEditable data={this.state.name} callback={this.inputChange} fieldName={'name'} type="h1" inputType="text" placeholder="John Doe"/>
                     <InputEditable data={this.state.email} callback={this.inputChange} fieldName={'email'} type="p" inputType="email" placeholder="John.Doe@example.com"/>
@@ -80,7 +80,7 @@ class PersonalInfo extends Component {
                                 />
                         )
                     })}
-                    <span className="justify-self-center" tabIndex="0" onKeyPress={() => this.addToArray('websites')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('websites')}></i></span>
+                    <span className="justify-self-center " tabIndex="0" onKeyPress={() => this.addToArray('websites')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('websites')}></i></span>
                 </div>
             </div>
         )

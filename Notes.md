@@ -3,20 +3,26 @@ __still to do__
 * figure out how I will delete a whole section
 * Add section btn - how to show drop down/select?
 * Create a blank input section
+* delay closeInput() for font-color
 
 * personalise section
     * Create correct list of drop down options
     * Add root variables to CSS 
-    * Update functions to update root variables
-    * download google fonts
+        * Create root vars for each class
 
-
+* Create selector classes (p-text, sh-text, h-text)
 
 __Things to think about__
 * Delete from array without pressing tick first.
 * textarea pencil edit full width. 
 * Tool tip on inputs?
 * hide output if there is no value
+
+
+__done 21/09/2022__
+* personalise section
+    * download google fonts
+    * Update functions to update root variables
 
 __done 18/09/2022__
 * Style CV

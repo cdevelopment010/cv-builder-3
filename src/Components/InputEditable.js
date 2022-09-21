@@ -74,7 +74,7 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="p") {
             return(
                 <div>
-                    <span className={`input-text-state ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <span className={`input-text-state p-text ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
                         {textState}
                         <span className="hover-edit cursor-pointer">
                             <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
@@ -87,7 +87,7 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="a") {
             return(
                 <div>
-                    <span className={`input-text-state ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <span className={`input-text-state p-text ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
                         <a href={`https://${this.props.data}`} target="_blank" rel="noreferrer">{textState}</a>
                         <span className="hover-edit cursor-pointer">
                             <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
@@ -104,7 +104,7 @@ class InputEditable extends Component {
             return (
                 <div className="flex-grow">
                     <label className="input-label">
-                        <input placeholder={this.props.placeholder} className={`p-1 mb-2 ${this.props.additionalClasses}`}  type="text" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd" />
+                        <input placeholder={this.props.placeholder} className={`p-1 mb-2 p-text ${this.props.additionalClasses}`}  type="text" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd" />
                         <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" ></i></button>
                     </label>
                 </div>
@@ -114,7 +114,7 @@ class InputEditable extends Component {
             return (
                 <div className="">
                     <label  className="input-label">
-                        <input placeholder={this.props.placeholder} className={`p-1 mb-2 ${this.props.additionalClasses}`}  type="email" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <input placeholder={this.props.placeholder} className={`p-1 mb-2 p-text ${this.props.additionalClasses}`}  type="email" value={this.props.data} onKeyPress={this.submitInput} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
                         <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i></button>
 
                     </label>
@@ -125,7 +125,7 @@ class InputEditable extends Component {
             return (
                 <div className="">
                     <label  className="input-label">
-                        <textarea  placeholder={this.props.placeholder} className={`p-1 mb-2 ${this.props.additionalClasses}`} value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
+                        <textarea  placeholder={this.props.placeholder} className={`p-1 mb-2 p-text ${this.props.additionalClasses}`} value={this.props.data} onChange={this.props.callback} data-name={this.props.fieldName} autoComplete="asdasd"/>
                         <button type="button" onClick={this.updateEdit}><i className="fa-regular fa-circle-check cursor-pointer" onClick={this.updateEdit}></i></button>
                     </label>
 
