@@ -74,7 +74,7 @@ class Education extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
                 </div>
                 <div>
                     <div className="grid-1-col grid-col-gap">
@@ -89,6 +89,7 @@ class Education extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Mathematics"
+                                     additionalClassesOutput="sh-text"
                                     />
                                     <InputEditable
                                     data={education.dates} 
@@ -97,7 +98,7 @@ class Education extends Component {
                                     type="p" 
                                     inputType="text"
                                     additionalClasses="mt-1 mb-1 w-100"
-                                    additionalClassesOutput="text-right"
+                                    additionalClassesOutput="text-right p-text"
                                     placeholder="July 2021 - Present"
                                     />
                                     <InputEditable
@@ -108,6 +109,7 @@ class Education extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="First"
+                                     additionalClassesOutput="p-text"
                                     />
                                     <div></div>
                                     <InputEditable
@@ -118,6 +120,7 @@ class Education extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="University of [X]"
+                                     additionalClassesOutput="p-text"
                                     />
                                     <div></div>
 
@@ -129,6 +132,7 @@ class Education extends Component {
                                         type="p" 
                                         inputType="textArea"
                                         placeholder="Description"
+                                        additionalClassesOutput="p-text"
                                         />
                                     </div>
 
@@ -141,7 +145,7 @@ class Education extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('educations')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('educations')}></i></span>
+                    <span className="justify-self-center primary-color-text btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('educations')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('educations')}></i></span>
                 </div>
             </div>
         )

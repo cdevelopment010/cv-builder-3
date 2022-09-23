@@ -8,7 +8,6 @@ class Personalise extends Component {
         this.print = this.print.bind(this);
         this.changeColor = this.changeColor.bind(this);
         this.updateColor = this.updateColor.bind(this);
-        this.closeInput = this.closeInput.bind(this);
         this.activateBtn = this.activateBtn.bind(this);
         this.updateCSSVar = this.updateCSSVar.bind(this);
         this.inputChange = this.inputChange.bind(this);
@@ -19,23 +18,15 @@ class Personalise extends Component {
     }
 
     changeColor() {
-        console.log("Change color clicked"); 
-        document.querySelector('.color-bar input').classList.remove('d-none');
+        // document.querySelector('.color-bar input').classList.remove('d-none');
+        document.querySelector('.color-bar input').focus()
     }
 
     updateColor( e ){
-        this.updateCSSVar('currentColor',null,e.target.value);
+        this.updateCSSVar('--primary-color-fc',null,e.target.value);
         this.inputChange( e );
     }
 
-    closeInput( e ){
-        // console.log(e)
-        // console.log(e.target.getBoundingClientRect())
-        // setTimeout(()=> {
-            document.querySelector('.color-bar input').classList.add('d-none');
-
-        // }, 100)
-    }
 
     activateBtn( e ) {
         console.log(e.target.id);
@@ -60,22 +51,14 @@ class Personalise extends Component {
     inputChange( e ) {
         let id = document.getElementById('input-type').value;
         let property = e.target.getAttribute("data-property"); 
-        console.log(e.target.value);
-        console.log(property);
-        console.log(id);
+        // console.log(e.target.value);
+        // console.log(property);
+        // console.log(id);
         this.updateCSSVar(id,property,e.target.value);
 
     }
     
     render() {
-
-        // This broke stuff...
-        // let myFontSize = [];
-        // for (let i = 8; i < 100; i+2){
-        //     myFontSize.push(i);
-        // }
-
-
         return (
             <div className="print-hide w-100">
 
@@ -87,7 +70,9 @@ class Personalise extends Component {
                             <option value="primary-color">Primary Color</option>
                             <option value="p-text">Paragraph Text</option>
                             <option value="header-text">Section Header</option>
-                            <option value="header-text">Section Header</option>
+                            <option value="name">Name</option>
+                            <option value="pi-text">Personal Info</option>
+                            <option value="sh-text">Sub Headers</option>
                         </select>
 
                     </li>
@@ -115,6 +100,10 @@ class Personalise extends Component {
                             <option value="18px">18px</option>
                             <option value="20px">20px</option>
                             <option value="22px">22px</option>
+                            <option value="28px">28px</option>
+                            <option value="36px">36px</option>
+                            <option value="48px">48px</option>
+                            <option value="72px">72px</option>
                         </select>
                     </li>
 
@@ -125,18 +114,15 @@ class Personalise extends Component {
                     </li>
 
                     <li className="color-bar" onClick={this.changeColor}>
-                        <span>
-                            A
-                        </span>
-                        <span><i className="fa-solid fa-caret-down"></i></span>
+                        <label htmlFor="font-color">
+                            <span>
+                                A
+                            </span>
+                            <span><i className="fa-solid fa-caret-down"></i></span>
+                            <input type="color" value="#008000" name="font-color" id="font-color" onChange={this.updateColor} data-property="fc"/>
+                        </label>
                         <span className="current-color"></span>
-                        <input className="d-none" type="color" name="font-color" id="font-color" onChange={this.updateColor} onMouseLeave={this.closeInput} data-property="fc"/>
                     </li>
-                    
-
-
-
-
                 </ul>
             
             </div>

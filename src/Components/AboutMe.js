@@ -58,8 +58,8 @@ class AboutMe extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
-                    <InputEditable data={this.state.aboutText} callback={this.inputChange} fieldName={'aboutText'} type="p" inputType="textArea" placeholder="Personal statement..."/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
+                    <InputEditable data={this.state.aboutText} callback={this.inputChange} fieldName={'aboutText'} type="p" inputType="textArea" placeholder="Personal statement..." additionalClassesOutput="p-text"/>
                 </div>
             </div>
         )

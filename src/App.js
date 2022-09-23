@@ -35,7 +35,7 @@ class App extends Component {
           <Education />
           <References />
           <div className="text-center hr-line pb-2 pt-2 print-hide">
-            <span className="text-success btn-add bg-white" tabIndex="0"><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => {console.log("add new section!")}}></i></span>
+            <span className="primary-color-text btn-add bg-white" tabIndex="0"><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => {console.log("add new section!")}}></i></span>
           </div>
         </div>
         <PrintBtn />

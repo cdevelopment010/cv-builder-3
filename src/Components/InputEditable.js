@@ -14,7 +14,6 @@ class InputEditable extends Component {
     }
 
     submitInput( e ) {
-        console.log(e);
         if (e.key ===  "Enter"){this.updateEdit()}
     }
 
@@ -25,8 +24,6 @@ class InputEditable extends Component {
 
     updateEdit() {
         let newVal=!this.state.edit
-        console.log(newVal);
-
         this.setState({edit: newVal})
     }
 
@@ -35,10 +32,10 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="h1") {
             return(
                 <div>
-                    <h1 className={`input-text-state ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <h1 className={`input-text-state ${this.props.additionalClasses || ''} ${this.props.additionalClassesOutput || ''}`}>
                         {textState}
                         <span className="hover-edit cursor-pointer">
-                            <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
+                            <i className="fa-solid fa-pencil text-black"  onClick={this.updateEdit}></i>
                         </span>
                     </h1>
 
@@ -48,10 +45,10 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="h2") {
             return(
                 <div>
-                    <h2 className={`input-text-state mb-2 ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <h2 className={`input-text-state mb-2 ${this.props.additionalClasses || ''} ${this.props.additionalClassesOutput || ''}`}>
                         {textState}
                         <span className="hover-edit cursor-pointer">
-                            <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
+                            <i className="fa-solid fa-pencil text-black"  onClick={this.updateEdit}></i>
                         </span>
                     </h2>
 
@@ -61,10 +58,10 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="h3") {
             return(
                 <div>
-                    <h3 className={`input-text-state ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <h3 className={`input-text-state ${this.props.additionalClasses || ''} ${this.props.additionalClassesOutput || ''}`}>
                         {textState}
                         <span className="hover-edit cursor-pointer">
-                            <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
+                            <i className="fa-solid fa-pencil text-black"  onClick={this.updateEdit}></i>
                         </span>
                     </h3>
 
@@ -74,10 +71,10 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="p") {
             return(
                 <div>
-                    <span className={`input-text-state p-text ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <span className={`input-text-state p-text ${this.props.additionalClasses || ''} ${this.props.additionalClassesOutput || ''}`}>
                         {textState}
                         <span className="hover-edit cursor-pointer">
-                            <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
+                            <i className="fa-solid fa-pencil text-black"  onClick={this.updateEdit}></i>
                         </span>
                     </span>
 
@@ -87,10 +84,10 @@ class InputEditable extends Component {
         if(!this.state.edit && this.props.type==="a") {
             return(
                 <div>
-                    <span className={`input-text-state p-text ${this.props.additionalClasses} ${this.props.additionalClassesOutput}`}>
+                    <span className={`input-text-state p-text ${this.props.additionalClasses || ''} ${this.props.additionalClassesOutput || ''}`}>
                         <a href={`https://${this.props.data}`} target="_blank" rel="noreferrer">{textState}</a>
                         <span className="hover-edit cursor-pointer">
-                            <i className="fa-solid fa-pencil "  onClick={this.updateEdit}></i>
+                            <i className="fa-solid fa-pencil text-black"  onClick={this.updateEdit}></i>
                         </span>
                     </span>
 

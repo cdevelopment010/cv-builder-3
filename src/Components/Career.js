@@ -73,7 +73,7 @@ class Career extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
                 </div>
                 <div>
                     <div className="grid-1-col grid-col-gap">
@@ -88,6 +88,7 @@ class Career extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Job Title"
+                                     additionalClassesOutput="sh-text"
                                     />
                                     <InputEditable
                                     data={career.dates} 
@@ -96,7 +97,7 @@ class Career extends Component {
                                     type="p" 
                                     inputType="text"
                                     additionalClasses="mt-1 mb-1 w-100"
-                                    additionalClassesOutput="text-right"
+                                    additionalClassesOutput="text-right p-text"
                                     placeholder="July 2021 - Present"
                                     />
                                     <InputEditable
@@ -106,6 +107,7 @@ class Career extends Component {
                                      type="p" 
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
+                                     additionalClassesOutput="p-text"
                                      placeholder="Company"
                                     />
                                     <div></div>
@@ -118,6 +120,7 @@ class Career extends Component {
                                         type="p" 
                                         inputType="textArea"
                                         placeholder="Job Description"
+                                        additionalClassesOutput="p-text"
                                         />
                                     </div>
 
@@ -130,7 +133,7 @@ class Career extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('careers')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('careers')}></i></span>
+                    <span className="justify-self-center primary-color-text btn-add cursor-pointer" tabIndex="0" onKeyPress={() => this.addToArray('careers')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('careers')}></i></span>
                 </div>
             </div>
         )

@@ -76,5 +76,6 @@ textarea {
 
 
 .btn-add:hover, .btn-add:active, .btn-add:focus{
-    color: #20a727;
+    /* color: #20a727; */
+    filter: hue-rotate(90deg)
 }

@@ -58,7 +58,7 @@ class Skills extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
                 </div>
                 <div>
                     <ul className="d-flex flex-wrap d-block-sm">
@@ -79,12 +79,13 @@ class Skills extends Component {
                                 inputType="text"
                                 placeholder="Microsoft Excel"
                                 additionalClasses="w-100"
+                                additionalClassesOutput="p-text"
                                 />
                             </li>
                         )
                     })}
                     </ul>
-                    <span className="justify-self-center text-success btn-add" tabIndex="0" onKeyPress={() => this.addToArray('skills')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('skills')}></i></span>
+                    <span className="justify-self-center primary-color-text btn-add" tabIndex="0" onKeyPress={() => this.addToArray('skills')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('skills')}></i></span>
                 </div>
             </div>
         )

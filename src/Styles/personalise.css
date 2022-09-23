@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --primary-color-fc: red;
+    --primary-color-fc: green;
 
     /*Paragraph variables*/
     --p-text-ff: 'Times New Romans';
@@ -12,12 +12,33 @@
     --p-text-fc:black;
 
     /*section header variables*/
-    --sh-ff: ;
-    --sh-fs: 12px;
-    --sh-fw: 400;
-    --sh-fi:normal;
-    --sh-fu:normal;
+    --header-text-ff: 'calibri';
+    --header-text-fs: 12px;
+    --header-text-fw: 400;
+    --header-text-fi:normal;
+    --header-text-fu:normal;
 
+    /*name variables*/
+    --name-ff: 'calibri';
+    --name-fs: 12px;
+    --name-fw: 400;
+    --name-fi:normal;
+    --name-fu:normal;
+
+    /*personal info variables*/
+    --pi-text-ff: 'calibri';
+    --pi-text-fs: 12px;
+    --pi-text-fw: 400;
+    --pi-text-fi:normal;
+    --pi-text-fu:normal;
+
+
+    /*sub-titles variables -- things like project titles*/
+    --sh-text-ff: 'calibri';
+    --sh-text-fs: 12px;
+    --sh-text-fw: 400;
+    --sh-text-fi:normal;
+    --sh-text-fu:normal;
 
 
 }
@@ -48,18 +69,20 @@
     left: 0;
     outline: none;
     border: none;
-    background:var(--currentColor) ;
+    background:var(--primary-color-fc) ;
 }
 
-.color-bar>input {
+.color-bar>label>input {
     position: absolute;
-    width: 100%;
+    width: 0%;
     height: 25px;
     top: 100%;
     left: 0;
     outline: none;
     border: none;
+    visibility: hidden;
 }
+
 
 .btn-personalise {
     height: 20px;
@@ -90,4 +113,43 @@
 }
 .primary-color-bg {
     background: var(--primary-color-fc);
+}
+.website-btn {
+    color: var(--pi-text-fc);
+}
+
+.header-text {
+    font-family: var(--header-text-ff);
+    font-size: var(--header-text-fs);
+    font-weight: var(--header-text-fw);
+    font-style: var(--header-text-fi);
+    text-decoration: var(--header-text-fu);
+    color: var(--header-text-fc);
+}
+
+.name {
+    font-family: var(--name-ff);
+    font-size: var(--name-fs);
+    font-weight: var(--name-fw);
+    font-style: var(--name-fi);
+    text-decoration: var(--name-fu);
+    color: var(--name-fc);
+}
+
+.pi-text {
+    font-family: var(--pi-text-ff);
+    font-size: var(--pi-text-fs);
+    font-weight: var(--pi-text-fw);
+    font-style: var(--pi-text-fi);
+    text-decoration: var(--pi-text-fu);
+    color: var(--pi-text-fc);
+}
+
+.sh-text {
+    font-family: var(--sh-text-ff);
+    font-size: var(--sh-text-fs);
+    font-weight: var(--sh-text-fw);
+    font-style: var(--sh-text-fi);
+    text-decoration: var(--sh-text-fu);
+    color: var(--sh-text-fc);
 }

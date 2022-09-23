@@ -72,7 +72,7 @@ class References extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
                 </div>
                 <div>
                     <div className="grid-2-col grid-1-col-sm grid-col-gap">
@@ -87,6 +87,7 @@ class References extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Jane Doe"
+                                     additionalClassesOutput="sh-text"
                                     />
                                     <InputEditable
                                      data={reference.email} 
@@ -96,6 +97,7 @@ class References extends Component {
                                      inputType="email"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Jane.Doe@example.com"
+                                     additionalClassesOutput="p-text"
                                     />
                                     <InputEditable
                                      data={reference.phone} 
@@ -105,6 +107,7 @@ class References extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="789-789-7890"
+                                     additionalClassesOutput="p-text"
                                     />
 
 
@@ -117,7 +120,7 @@ class References extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add" tabIndex="0" onKeyPress={() => this.addToArray('references')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('references')}></i></span>
+                    <span className="justify-self-center primary-color-text btn-add" tabIndex="0" onKeyPress={() => this.addToArray('references')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('references')}></i></span>
                 </div>
             </div>
         )

@@ -72,7 +72,7 @@ class Projects extends Component {
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false}/>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={'title'} type="h2" inputType="text" editMe={false} additionalClassesOutput="header-text"/>
                 </div>
                 <div>
                     <div className="grid-2-col grid-col-gap grid-1-col-sm">
@@ -87,6 +87,7 @@ class Projects extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Project Title"
+                                     additionalClassesOutput="sh-text"
                                     />
                                     <InputEditable
                                      data={project.link} 
@@ -96,6 +97,7 @@ class Projects extends Component {
                                      inputType="text"
                                      additionalClasses="mt-1 mb-1 w-100"
                                      placeholder="Project link"
+                                     additionalClassesOutput="p-text"
                                     />
                                     <InputEditable
                                      data={project.description} 
@@ -104,6 +106,7 @@ class Projects extends Component {
                                      type="p" 
                                      inputType="textArea"
                                      placeholder="Description of project..."
+                                     additionalClassesOutput="p-text"
                                     />
 
 
@@ -116,7 +119,7 @@ class Projects extends Component {
                         )
                     })}
                     </div>
-                    <span className="justify-self-center text-success btn-add primary-color-text" tabIndex="0" onKeyPress={() => this.addToArray('projects')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('projects')}></i></span>
+                    <span className="justify-self-center btn-add primary-color-text" tabIndex="0" onKeyPress={() => this.addToArray('projects')}><i className="fa-solid fa-circle-plus fa-2x cursor-pointer mt-1" onClick={() => this.addToArray('projects')}></i></span>
                 </div>
             </div>
         )
