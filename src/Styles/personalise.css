@@ -1,44 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --primary-color-fc: green;
-
+    --primary-color-fc:#008000;
+    --current-col:#008000;
     /*Paragraph variables*/
-    --p-text-ff: 'Times New Romans';
-    --p-text-fs: 12px;
-    --p-text-fw: 400;
+    --p-text-ff:'Roboto';
+    --p-text-fs:12px;
+    --p-text-fw:400;
     --p-text-fi:normal;
     --p-text-fu:normal;
-    --p-text-fc:black;
+    --p-text-fc: #000;
 
     /*section header variables*/
-    --header-text-ff: 'calibri';
-    --header-text-fs: 12px;
-    --header-text-fw: 400;
+    --header-text-ff:'inter';
+    --header-text-fs:22px;
+    --header-text-fw:700;
     --header-text-fi:normal;
-    --header-text-fu:normal;
+    --header-text-fu:underline;
+    --header-text-fc:#0000ff;
 
     /*name variables*/
-    --name-ff: 'calibri';
-    --name-fs: 12px;
-    --name-fw: 400;
+    --name-ff:'Roboto';
+    --name-fs:12px;
+    --name-fw:400;
     --name-fi:normal;
     --name-fu:normal;
+    --name-fc:#000;
+
 
     /*personal info variables*/
-    --pi-text-ff: 'calibri';
-    --pi-text-fs: 12px;
-    --pi-text-fw: 400;
+    --pi-text-ff:'Roboto';
+    --pi-text-fs:12px;
+    --pi-text-fw:400;
     --pi-text-fi:normal;
     --pi-text-fu:normal;
+    --pi-text-fc:#000;
 
 
     /*sub-titles variables -- things like project titles*/
-    --sh-text-ff: 'calibri';
-    --sh-text-fs: 12px;
-    --sh-text-fw: 400;
+    --sh-text-ff:'Roboto';
+    --sh-text-fs:16px;
+    --sh-text-fw:700;
     --sh-text-fi:normal;
     --sh-text-fu:normal;
+    --sh-text-fc:#000;
 
 
 }
@@ -69,7 +74,7 @@
     left: 0;
     outline: none;
     border: none;
-    background:var(--primary-color-fc) ;
+    background:var(--current-col) ;
 }
 
 .color-bar>label>input {

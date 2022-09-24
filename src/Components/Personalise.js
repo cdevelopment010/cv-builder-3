@@ -11,6 +11,7 @@ class Personalise extends Component {
         this.activateBtn = this.activateBtn.bind(this);
         this.updateCSSVar = this.updateCSSVar.bind(this);
         this.inputChange = this.inputChange.bind(this);
+        this.setCSSVar = this.setCSSVar.bind(this);
     }
 
     print() {
@@ -23,7 +24,7 @@ class Personalise extends Component {
     }
 
     updateColor( e ){
-        this.updateCSSVar('--primary-color-fc',null,e.target.value);
+        this.updateCSSVar('current-col',null,e.target.value);
         this.inputChange( e );
     }
 
@@ -48,6 +49,37 @@ class Personalise extends Component {
         r.style.setProperty(`--${selector}`, value);
     }
 
+    setCSSVar( e ){
+
+        // Get root variables
+        // select each that start with the e.target.value
+        // then I want to target each input and set the value
+        let r = document.querySelector(':root');
+        let property = e.target.value; 
+        let options = [['ff','select'], ['fs','select'], ['fw','button'], ['fi','button'], ['fu','button'], ['fc','input']];
+        options.forEach( (x) => {
+            let vVar = '--'+property+'-'+x[0];
+            let rVal = getComputedStyle(r).getPropertyValue(vVar).replace(/"/gi,'').toLowerCase();
+            
+            //target inputs/buttons
+
+            if(x[1]==="button" && (rVal === '700' || rVal === 'italic' || rVal === 'underline' )) {
+                document.querySelector(`[data-property=${x[0]}]`).classList.add("active");
+            } else if (x[1]==="button") {
+                document.querySelector(`[data-property=${x[0]}]`).classList.remove("active");
+            } else {
+                if (x[1] === 'input'){
+                    this.updateCSSVar('current-col',null,rVal);
+                }
+                document.querySelector(`[data-property=${x[0]}]`).value=rVal;
+                console.log(rVal);
+                console.log(document.querySelector(`[data-property=${x[0]}]`).value);
+            }
+        })
+
+
+    }
+
     inputChange( e ) {
         let id = document.getElementById('input-type').value;
         let property = e.target.getAttribute("data-property"); 
@@ -66,7 +98,7 @@ class Personalise extends Component {
 
 
                     <li>
-                        <select name="input-type" id="input-type">
+                        <select name="input-type" id="input-type" onChange={this.setCSSVar}>
                             <option value="primary-color">Primary Color</option>
                             <option value="p-text">Paragraph Text</option>
                             <option value="header-text">Section Header</option>

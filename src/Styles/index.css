@@ -1,0 +1,84 @@
+.add-section, .section {
+    position: relative;
+}
+
+.section>.hover-edit {
+    font-weight: bold;
+    font-size: 2rem;
+    top: 1em; 
+    right: 1em;
+} 
+
+
+.section:hover .hover-edit {
+    /* display: inline; */
+    scale: 1;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgba(0,0,0,0.25);
+    z-index: 10; 
+}
+
+.add-section-list {
+    font-family: 'roboto';
+    position: fixed; 
+    width: 50%;
+    height: 50%;
+    top: 30px; 
+    left: 25%; 
+    border-radius: 10px; 
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    background-color: white;
+    z-index: 11; 
+}
+.add-section-list ul {
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;
+    line-height: 100%;
+}
+
+
+.add-section-list li {
+    list-style: none;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-section-list li:hover {
+    background: rgb(98, 98, 127);
+    font-weight: bold;
+    color: white; 
+
+}
+
+
+
+
+.print-btn {
+    padding: 10px 100px;
+    outline: none;
+    border: 1px solid rgb(98, 98, 127); 
+    cursor: pointer;
+    background:rgb(98, 98, 127);
+    color: white;
+}
+
+.print-btn:hover {
+    font-weight: bold;
+    background:white;
+    color: rgb(98, 98, 127);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+}

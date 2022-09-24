@@ -1,9 +1,5 @@
 __still to do__
-* Font family for text area - be consistent
-* figure out how I will delete a whole section
-* Add section btn - how to show drop down/select?
 * Create a blank input section
-* on personalise drop down change - set the values of each input.   
 
 __Things to think about__
 * Delete from array without pressing tick first.
@@ -11,6 +7,12 @@ __Things to think about__
 * Tool tip on inputs?
 * hide output if there is no value
 
+__done 24/09/2022__
+* take p-text off inputs and style them separately!
+* on personalise drop down change - set the values of each input.  
+* Font family for text area - be consistent
+* Add section btn - how to show drop down/select?
+* figure out how I will delete a whole section
 
 __done 23/09/2022__
 * delay closeInput() for font-color
