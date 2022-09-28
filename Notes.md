@@ -1,11 +1,14 @@
 __still to do__
-* Create a blank input section
+
 
 __Things to think about__
 * Delete from array without pressing tick first.
 * textarea pencil edit full width. 
 * Tool tip on inputs?
 * hide output if there is no value
+
+__done 28/09/2022__
+* Create a blank input section
 
 __done 24/09/2022__
 * take p-text off inputs and style them separately!

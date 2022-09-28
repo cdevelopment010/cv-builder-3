@@ -28,7 +28,7 @@
     z-index: 10; 
 }
 
-.add-section-list {
+.add-section-list, .add-custom {
     font-family: 'roboto';
     position: fixed; 
     width: 50%;
@@ -39,12 +39,20 @@
     box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
     background-color: white;
     z-index: 11; 
+    overflow: hidden;
 }
+
+.add-custom {
+    padding-top: 1rem;
+    display: grid;
+}
+
 .add-section-list ul {
     height: 100%; 
     display: flex; 
     flex-direction: column;
     line-height: 100%;
+    justify-content: flex-end;
 }
 
 
