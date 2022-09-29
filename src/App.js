@@ -66,6 +66,7 @@ class App extends Component {
     document.querySelector('.add-section-list').classList.remove('d-none');
   }
   customModal() {
+    let title = document.querySelector('input[name="title"]').checked ? true : false;
     let sub = document.querySelector('input[name="subtitle"]').checked ? [''] : [];
     let inputs = document.getElementById('inputs').value >= 9 ? 8 : document.getElementById('inputs').value; 
     let cols = document.getElementById('columns').value >= 9 ? 8 : document.getElementById('columns').value; 
@@ -75,16 +76,15 @@ class App extends Component {
       for (let j = 0; j< inputs; j++) {
         arr1.push('');
       }
-      arrs.push(arr1);
+      if (sub) {
+        arrs.push({stitle: '', inputs: arr1});
+      } else {
+        arrs.push({inputs: arr1});
+      }
     }
     
-    console.log(sub);
-
     let currentView = [...this.state.currentView];
-
-
-    let itemToPush = <CustomLayout subtitle={sub} columns={arrs}/>
-
+    let itemToPush = <CustomLayout title={title} columns={arrs}/>
     currentView.push(itemToPush);
     this.setState({
       currentView: currentView
@@ -113,11 +113,6 @@ class App extends Component {
     };
     
     let currentView = [...this.state.currentView];
-
-
-
-
-
     currentView.push(this.state.components[index]);
     this.setState({
       currentView: currentView
@@ -161,6 +156,13 @@ class App extends Component {
               <span className="d-none"></span>
               <div>
                 <p className="mb-2">Add section header?</p>
+                <label htmlFor="title1" className="mr-1">Yes</label>
+                  <input type="radio" name="title" id="title1" value="1"/>
+                <label htmlFor="title0" className="ml-4 mr-1">No</label>
+                  <input type="radio" name="title" id="title0" value="0"/>
+              </div>
+              <div>
+                <p className="mb-2">Add sub title?</p>
                 <label htmlFor="subtitle1" className="mr-1">Yes</label>
                   <input type="radio" name="subtitle" id="subtitle1" value="1"/>
                 <label htmlFor="subtitle0" className="ml-4 mr-1">No</label>

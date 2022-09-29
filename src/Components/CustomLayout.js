@@ -8,7 +8,7 @@ class CustomLayout extends Component {
         super(props); 
 
         this.state = {
-            subtitle: this.props.subtitle,
+            title: '',
             columns: this.props.columns
 
         }
@@ -20,12 +20,15 @@ class CustomLayout extends Component {
         let field = e.target.getAttribute('data-name').split("-")[0];
         let index = e.target.getAttribute('data-name').split("-")[1] || null;
         let index2 = e.target.getAttribute('data-name').split("-")[2] || null;
+        let index3 = e.target.getAttribute('data-name').split("-")[3] || null;
         let currValue = this.state[field];
-        if(index !== null && index2 === null){
+        if(index !== null && index2 === null && index3 === null){
             currValue[index] = e.target.value;
-        } else if (index !== null && index2 !== null) {
+        } else if (index !== null && index2 !== null && index3 === null) {
             currValue[index][index2] = e.target.value;
-        } else {
+        } else if (index !== null && index2 !== null && index3 !== null) {
+            currValue[index][index2][index3] = e.target.value;
+        }else {
             currValue = e.target.value;
         }
         this.setState({
@@ -41,17 +44,16 @@ class CustomLayout extends Component {
 
     */
     render() {
+        let showHeader
+        if (this.props.title) {
+                showHeader=<div key={`custom-title`}>
+                    <InputEditable data={this.state.title} callback={this.inputChange} fieldName={`title`} type="h2" inputType="text" additionalClassesOutput="header-text"/>
+                </div>
+        }
         return (
             <div className="grid-1-col p-5">
                 <div>
-                    {this.state.subtitle.map((x,index)=> {
-                        return (
-                            <div key={`custom-subtitle-${index}`}>
-                                <InputEditable data={this.state.title} callback={this.inputChange} fieldName={`title`} type="h2" inputType="text" additionalClassesOutput="header-text"/>
-                                {/* <InputEditable data={x} callback={this.inputChange} fieldName={`subtitle-${index}`} type="h3" inputType="text" additionalClassesOutput="header-text"/> */}
-                            </div>
-                        )
-                    })}
+                    {showHeader}
 
                     <div className={`grid-${this.state.columns.length}-col grid-col-gap`}>
 
@@ -59,10 +61,11 @@ class CustomLayout extends Component {
                     {this.state.columns.map((y,index2)=> {
                         return (
                             <div key={`Custom-${index2}`}>
-                                {y.map((z,index3)=> {
+                                <InputEditable data={y.stitle} callback={this.inputChange} fieldName={`columns-${index2}-stitle`} type="h3" inputType="text" additionalClassesOutput="sh-text"/>
+                                {y.inputs.map((z,index3)=> {
                                     return (
                                         <div key={`custom-input-${index3}`}>   
-                                            <InputEditable data={z} callback={this.inputChange} fieldName={`columns-${index2}-${index3}`} type="p" inputType="textArea" placeholder="" additionalClassesOutput="p-text"/>
+                                            <InputEditable data={z} callback={this.inputChange} fieldName={`columns-${index2}-inputs-${index3}`} type="p" inputType="textArea" placeholder="" additionalClassesOutput="p-text"/>
                                         </div>
                                     )   
                                     })}
